@@ -41,6 +41,13 @@ body {
   font-style: normal;
 }
 
+.lato {
+  font-family: "Lato", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+
 /* Text Colors */
 .text-green {
   color: var(--primary-avacado);

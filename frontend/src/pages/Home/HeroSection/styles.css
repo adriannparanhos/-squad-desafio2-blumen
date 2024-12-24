@@ -21,7 +21,7 @@
   align-items: start;
   justify-content: center;
   gap: 24px;
-  margin: -10rem 0 0 8rem;
+  margin: -10rem 0 0 10rem;
 }
 
 .hero-love {
@@ -84,7 +84,7 @@
     flex-direction: column;
     gap: 24px;
   }
-
+  
   .hero-content {
     display: flex;
     flex-direction: column;
@@ -94,14 +94,16 @@
     margin: 4rem 0 0 0;
     padding: 0 1rem;
   }
-
+  
   .hero-text {
     gap: 24px;
+    align-items: center;
   }
-
+  
   .hero-title {
     font-size: 3rem;
     line-height: 3rem;
+    text-align: center;
   }
 
   .hero-subtitle {
