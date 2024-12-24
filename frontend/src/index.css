@@ -12,7 +12,7 @@
   --secondary: hsla(70, 5%, 49%, 1);
   --white: hsla(0, 0%, 99%, 1);
   --black: hsla(240, 9%, 13%, 1);
-  --gray: hsla(83, 5%, 68%, 1);
+  --gray: hsla(80, 10%, 94%, 1);
   --athena-gray: hsla(220, 27%, 98%, 1);
 }
 
@@ -39,4 +39,9 @@ body {
   font-family: "EB Garamond", serif;
   font-optical-sizing: auto;
   font-style: normal;
+}
+
+/* Text Colors */
+.text-green {
+  color: var(--primary-avacado);
 }
