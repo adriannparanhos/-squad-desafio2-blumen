@@ -1,5 +1,5 @@
-import { RegisterPlantForm } from "./RegisterPlantForm";
-import './styles.css'
+import { RegisterPlantForm } from "../../components/RegisterPlantForm";
+import "./styles.css";
 
 export default function Register() {
   return (
@@ -8,7 +8,11 @@ export default function Register() {
         <h2 className="register-title inter">Plant registration</h2>
         <RegisterPlantForm />
       </div>
-      <img className="register-plant" src="/images/main-plant.png" alt="Main plant" />
+      <img
+        className="register-plant"
+        src="/images/main-plant.png"
+        alt="Main plant"
+      />
     </div>
   );
 }

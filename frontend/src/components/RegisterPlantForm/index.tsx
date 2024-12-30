@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 
 import { FormField } from "./FormField";
 import { registerPlantFormSchema } from "./schema";
-import { Button } from "../../../components/Button";
+import { Button } from "../Button";
 import "./styles.css";
 
 export function RegisterPlantForm() {
