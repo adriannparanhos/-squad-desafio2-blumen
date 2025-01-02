@@ -30,3 +30,4 @@ connectDatabase()
     .catch((error) => console.error('Erro inesperado:', error));
 
 console.log('Hello, TypeScript!');
+console.log('Teste de integração bem-sucedido' );
