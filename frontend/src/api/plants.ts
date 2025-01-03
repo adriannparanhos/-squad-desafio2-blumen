@@ -3,7 +3,7 @@ import { Plant, Label, PlantResponse } from "../types/plant";
 
 export async function getAllPlants(): Promise<Plant[]> {
   try {
-    const res = await api.get<PlantResponse[]>("/plantas");
+    const res = await api.get<PlantResponse[]>("/api/plantas");
 
     const { data } = res;
 

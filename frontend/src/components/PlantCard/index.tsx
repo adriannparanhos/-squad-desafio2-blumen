@@ -24,9 +24,11 @@ export function PlantCard({ plant }: PlantCardProps) {
             <span className="discounted-price raleway">
               {formatCurrency(discountedPrice)}
             </span>
-            <span className="real-price raleway">
-              {formatCurrency(plant.price)}
-            </span>
+            {discountedPrice !== plant.price && (
+              <span className="real-price raleway">
+                {formatCurrency(plant.price)}
+              </span>
+            )}
           </div>
         </div>
 
