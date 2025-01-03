@@ -7,10 +7,12 @@ import "./styles.css";
 
 export function PlantsSection() {
   const [plants, setPlants] = useState<Plant[]>([]);
-
+  
   useEffect(() => {
     getAllPlants().then(setPlants);
   }, []);
+
+  const inSalesPlants = plants.filter((plant) => plant.isSale);
 
   return (
     <section className="plants-section">
@@ -30,7 +32,7 @@ export function PlantsSection() {
         </h1>
       </header>
       <main className="plants-content">
-        <PlantsSlide plants={plants} />
+        <PlantsSlide plants={inSalesPlants} />
       </main>
     </section>
   );

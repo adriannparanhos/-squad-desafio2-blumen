@@ -1,4 +1,4 @@
-type Label = ["indoor" | "outdoor", string];
+export type Label = ["indoor" | "outdoor", string];
 
 export type Plant = {
   id: number;
@@ -6,8 +6,23 @@ export type Plant = {
   subtitle: string;
   label: Label;
   price: number;
+  isSale: boolean;
   discount: number;
   features: string;
   description: string;
   imageUrl: string;
+};
+
+export type PlantResponse = {
+  id: number;
+  nome: string;
+  subtitulo: string;
+  etiquetas: string;
+  preco: number;
+  esta_em_promocao?: number;
+  porcentagem_desconto?: number;
+  caracteristicas: string;
+  descricao: string;
+  url_imagem: string;
+  tipo_planta_nome: string;
 };
