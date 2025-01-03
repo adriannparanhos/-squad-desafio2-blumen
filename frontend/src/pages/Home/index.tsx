@@ -1,4 +1,5 @@
 import { HeroSection } from "./HeroSection";
+import { PlantsSection } from "./PlantsSection";
 import { StepsSection } from "./StepsSection";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <>
       <HeroSection />
       <StepsSection />
+      <PlantsSection />
     </>
   );
 }
