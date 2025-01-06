@@ -6,8 +6,13 @@ import { FormField } from "./FormField";
 import { registerPlantFormSchema } from "./schema";
 import { Button } from "../Button";
 import "./styles.css";
+import { PlantResquest } from "../../types/plant";
+import { createPlant } from "../../api/plants";
+import { useState } from "react";
 
 export function RegisterPlantForm() {
+  const [isLoading, setIsLoading] = useState(false);
+
   const {
     register,
     handleSubmit,
@@ -16,7 +21,7 @@ export function RegisterPlantForm() {
     resolver: zodResolver(registerPlantFormSchema),
   });
 
-  function onSubmit(values: z.infer<typeof registerPlantFormSchema>) {
+  async function onSubmit(values: z.infer<typeof registerPlantFormSchema>) {
     const {
       name,
       subtitle,
@@ -28,7 +33,7 @@ export function RegisterPlantForm() {
       type,
     } = values;
 
-    const data = {
+    const data: PlantResquest = {
       name: name,
       subtitle: subtitle,
       label: [label, type],
@@ -37,8 +42,9 @@ export function RegisterPlantForm() {
       features,
       description,
     };
-    
-    console.log(data);
+
+    setIsLoading(true);
+    createPlant(data).finally(() => setIsLoading(false));
   }
 
   return (
@@ -84,7 +90,9 @@ export function RegisterPlantForm() {
         />
       </div>
 
-      <label htmlFor="label" className="input-label inter">Label</label>
+      <label htmlFor="label" className="input-label inter">
+        Label
+      </label>
       <div className="radio-group">
         <FormField
           type="radio"
@@ -125,7 +133,7 @@ export function RegisterPlantForm() {
         error={errors.description}
       />
 
-      <Button label="Register" />
+      <Button label="Register" disabled={isLoading}/>
     </form>
   );
 }

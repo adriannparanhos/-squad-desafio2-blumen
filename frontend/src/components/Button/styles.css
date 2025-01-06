@@ -16,3 +16,8 @@
   cursor: pointer;
   z-index: 5;
 }
+
+.container:disabled {
+  background-color: var(--primary-avacado);
+  cursor: default;
+}

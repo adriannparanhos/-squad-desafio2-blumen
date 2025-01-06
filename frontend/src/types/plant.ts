@@ -26,3 +26,13 @@ export type PlantResponse = {
   url_imagem: string;
   tipo_planta_nome: string;
 };
+
+export type PlantResquest = {
+  name: string;
+  subtitle: string;
+  label: string[];
+  price: number;
+  discount: number;
+  features: string;
+  description: string;
+};
