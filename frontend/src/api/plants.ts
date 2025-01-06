@@ -7,8 +7,10 @@ export async function getAllPlants(): Promise<Plant[]> {
   try {
     const res = await api.get<PlantResponse[]>("/api/plantas");
 
+    
     const { data } = res;
-
+    console.log('Data: ', data)
+    
     const plants: Plant[] = data.map((plant) => {
       const labels = plant.etiquetas.split(",");
       const label: Label = [
