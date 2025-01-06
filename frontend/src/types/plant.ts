@@ -14,7 +14,7 @@ export type Plant = {
 };
 
 export type PlantResponse = {
-  id: number;
+  id: string;
   nome: string;
   subtitulo: string;
   etiquetas: string;
