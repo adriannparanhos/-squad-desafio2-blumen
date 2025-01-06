@@ -1,5 +1,7 @@
+import { useNavigate } from "react-router";
 import { Plant } from "../../types/plant";
 import { formatCurrency } from "../../utils/formatCurrency";
+import { Badge } from "../Badge";
 import "./styles.css";
 
 type PlantCardProps = {
@@ -7,11 +9,17 @@ type PlantCardProps = {
 };
 
 export function PlantCard({ plant }: PlantCardProps) {
+  const navigate = useNavigate();
+
   const discountValue = (plant.price * plant.discount) / 100;
   const discountedPrice = plant.price - discountValue;
 
+  function handleNavigate() {
+    return navigate(`/products/${plant.id}`);
+  }
+
   return (
-    <div key={plant.id} className="plant-card">
+    <div onClick={handleNavigate} className="plant-card">
       <img
         src={plant.imageUrl}
         alt={`${plant.name} image`}
@@ -24,15 +32,17 @@ export function PlantCard({ plant }: PlantCardProps) {
             <span className="discounted-price raleway">
               {formatCurrency(discountedPrice)}
             </span>
-            <span className="real-price raleway">
-              {formatCurrency(plant.price)}
-            </span>
+            {discountedPrice !== plant.price && (
+              <span className="real-price raleway">
+                {formatCurrency(plant.price)}
+              </span>
+            )}
           </div>
         </div>
 
         <ul className="plant-labels">
           {plant.label.map((label, index) => (
-            <li key={index}>{label}</li>
+            <Badge key={index} title={label} />
           ))}
         </ul>
       </div>
