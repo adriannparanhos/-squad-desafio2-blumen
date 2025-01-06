@@ -1,6 +1,6 @@
-# Squard-Desafio2-[Nome da Loja]
+# Squard-Desafio2-[Blumen]
 
-Este repositório contém o desafio 2 da semana 8, onde recriamos um site para uma loja fictícia de plantas, utilizando **React**, **TypeScript**, **Express** e outras tecnologias modernas. O projeto é composto por dois subprojetos: **Backend** (API) e **Frontend** (Web).
+Este repositório contém o desafio 2 da semana 8, onde recriamos um site para uma loja fictícia de plantas chamada Blumen, utilizando **React**, **TypeScript**. O projeto é composto por dois subprojetos: **Backend** (API) e **Frontend** (Web).
 
 ---
 
