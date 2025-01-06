@@ -1,4 +1,5 @@
 import { Developer } from "../../types/developer";
+import { Badge } from "../Badge";
 import "./styles.css";
 
 type DeveloperCardProps = {
@@ -16,7 +17,7 @@ export function DeveloperCard({ developer }: DeveloperCardProps) {
       <main className="developer-card-content">
         <header className="developer-card-header">
           <h1 className="developer-card-name raleway">{developer.name}</h1>
-          <span className="developer-card-role raleway">{developer.role}</span>
+          <Badge title={developer.role}/>
         </header>
         <p className="developer-card-description eb-garamond">
           {developer.personalDescription}

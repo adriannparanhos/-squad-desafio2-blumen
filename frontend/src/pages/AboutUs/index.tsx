@@ -6,9 +6,27 @@ const developers: Developer[] = [
   {
     name: "Thomas Henrique de Souza Santos",
     avatar: "https://github.com/thethoomm.png",
-    role: "Frotend Developer",
+    role: "Fullstack Developer",
     personalDescription:
-      "I'm fullstack developer, focused in Node.js ecosystem and Golang enthusiast. I have experience in modern web applications with Next.js and Nest.js.  I also enjoy working with the Vue.js ecosystem and stay updated with the latest technologies in the industry.",
+      "Node.js ecosystem (Next.js, Nest.js, Vue.js) and Golang.",
+  },
+  {
+    name: "Gelasio Ebel Junior",
+    avatar: "https://github.com/gelasioebel.png",
+    role: "Backend Developer",
+    personalDescription: "Forging my career path in technology",
+  },
+  {
+    name: "Adriann Postigo Paranhos",
+    avatar: "https://github.com/adriannparanhos.png",
+    role: "Fullstack Developer",
+    personalDescription: "Gosto de codar",
+  },
+  {
+    name: "Rodrigo Soares Prazeres",
+    avatar: "https://github.com/RodrigoPrazeres.png",
+    role: "Frontend Developer",
+    personalDescription: "Forging my career path in technology",
   },
 ];
 

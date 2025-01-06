@@ -2,12 +2,12 @@
   display: flex;
   align-items: start;
   max-width: 768px;
-  height: 200px;
+  height: 100%;
   gap: 12px;
 }
 
 .developer-card-avatar {
-  height: 100%;
+  width: 200px;
   aspect-ratio: 1/1;
 }
 
@@ -40,7 +40,25 @@
   background-color: var(--gray);
 }
 .developer-card-description {
+  height: 100%;
   color: var(--secondary);
   font-size: 20px;
   text-align: justify;
+}
+
+/* Responsividade */
+
+/* lg */
+@media (max-width: 1024px) {
+  .developer-card-avatar {
+    width: 140px;
+  }
+
+  .developer-card-name {
+    font-size: 18px;
+  }
+
+  .developer-card-description {
+    font-size: 16px;
+  }
 }
