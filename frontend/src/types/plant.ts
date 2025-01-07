@@ -14,7 +14,7 @@ export type Plant = {
 };
 
 export type PlantResponse = {
-  id: number;
+  id: string;
   nome: string;
   subtitulo: string;
   etiquetas: string;
@@ -25,4 +25,14 @@ export type PlantResponse = {
   descricao: string;
   url_imagem: string;
   tipo_planta_nome: string;
+};
+
+export type PlantResquest = {
+  name: string;
+  subtitle: string;
+  label: string[];
+  price: number;
+  discount: number;
+  features: string;
+  description: string;
 };

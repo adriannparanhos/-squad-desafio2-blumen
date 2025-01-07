@@ -1,3 +1,4 @@
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
 import "./styles.css";
 
 type Navlink = {
@@ -45,7 +46,12 @@ export function Navbar() {
       </ul>
 
       {/* Clerk login */}
-      <img src="" alt="" />
+      <SignedOut>
+        <SignInButton />
+      </SignedOut>
+      <SignedIn>
+        <UserButton />
+      </SignedIn>
     </header>
   );
 }
