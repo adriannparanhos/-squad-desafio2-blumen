@@ -3,20 +3,7 @@ import db from '../dataBase/connectDB';
 
 export const getPlantas = async (req: Request, res: Response) => {
   const query = `
-    SELECT 
-      p.id,
-      p.nome,
-      p.subtitulo,
-      p.etiquetas,
-      p.preco,
-      p.esta_em_promocao,
-      p.porcentagem_desconto,
-      p.caracteristicas,
-      p.descricao,
-      p.url_imagem,
-      tp.nome AS tipo_planta_nome
-    FROM plantas p
-    JOIN tipos_planta tp ON p.tipo_planta_id = tp.id;
+    SELECT * FROM plantas;
   `;
 
   try {
